@@ -5,7 +5,7 @@
 #include <string.h>
 #include <sys/mman.h>
 
-typedef int(*fn)(int, int);
+typedef int(*fn)(int);
 
 int main() {
   char *memory = mmap(NULL,             // address
