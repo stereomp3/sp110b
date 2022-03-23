@@ -16,9 +16,7 @@ int main() {
                       0);               // offset (not used here)
   assert(memory != NULL);
   char code[] = {
-    0xf3,0x0f,0x1e,0xfa,      // endbr64
-    0x8d,0x04,0x37,           // lea    (%rdi,%rsi,1),%eax
-    0xc3                      // retq
+    0x8d,0x47,0x03,0xc3
   };
 
   memcpy(memory, code, 8);
