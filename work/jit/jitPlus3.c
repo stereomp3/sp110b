@@ -19,7 +19,7 @@ int main() {
     0x8d,0x47,0x03,0xc3
   };
 
-  memcpy(memory, code, 8);
+  memcpy(memory, code, 4);
   fn f = (fn) memory;
 
   printf("plus3(5) = %d\n", (*f)(5));
