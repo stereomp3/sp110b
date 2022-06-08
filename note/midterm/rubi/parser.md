@@ -80,7 +80,7 @@ int assignment();
 
 struct {
     Variable var[0xFF];
-    int count;
+    int count;  // 紀錄連接變數的對象數量，如果等於0就銷毀變數
 } gblVar;
 
 static Variable locVar[0xFF][0xFF];
