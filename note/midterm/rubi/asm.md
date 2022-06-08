@@ -62,7 +62,8 @@ enum { IN_GLOBAL = 0, IN_FUNC };  // IN_GLOBAL 代表在function外，也是funt
 
 enum { BLOCK_LOOP = 1, BLOCK_FUNC };
 
-// 定義結構，val用來存rubi文件的內容，nline存這個是第幾行
+// 定義結構，val用來存rubi文件的內容，因為是弱型態，所以固定32bit
+// nline是存這個是第幾行，方便報錯的時候顯示
 typedef struct { char val[32]; int nline; } Token;
 struct {
     Token *tok;  // 多個tok紀錄所有文件內容，利用pos定位

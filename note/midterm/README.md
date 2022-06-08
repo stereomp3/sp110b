@@ -23,7 +23,7 @@ rubi的程式碼範例: [hello.rb](test/hello.rb)、 [sum.rb](test/sum.rb)、 [f
 
 # rubi 編譯過程
 
-一開始會先由 engine.c 開始，裡面有 main 觸發主函數，透過argv，可以讀取到文件名，就可以對指定的rubi文件進行編譯了 !!，這個專案神奇的地方就是不會產生執行檔案，會把機器碼塞入記憶體，直接跑出結果 !!
+一開始會先由 engine.c 開始，裡面有 main 觸發主函數，透過argv，可以讀取到文件名，就可以對指定的rubi文件進行編譯了 !!，這個專案神奇的地方就是不會產生執行檔案，會把機器碼塞入記憶體，在主程序(main())還沒跑完的時候，就可以直接跑出結果 !!
 
 
 
@@ -36,7 +36,7 @@ static int execute(char *source)
     lex(source);  // 把rubi文件內容複製到自訂結構tok
     parser();   // 解析語句
     // 下面這行大概可能我猜是把funtion設在ebp那邊，然後需要呼叫什麼函數，只需要jump到指定位置就OK了
-    (int (*)(int *, void **)) ntvCode;  // 執行機器碼
+    (int (*)(int *, void **)) ntvCode;  // 執行機器碼，跑出運行結果
     dispose();  // 執行完畢，釋放內存
     return 0;
 }
