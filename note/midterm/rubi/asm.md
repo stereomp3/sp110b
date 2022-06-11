@@ -26,6 +26,7 @@ static inline void emit(unsigned char val)
 {
     ntvCode[ntvCount++] = (val);
 }
+// big-endian、little-endian
 static inline void emitI32(unsigned int val)  // unsigned int ? 16byte
 {
     // 使用位移運算，處理32位元的數，把它分成4部分 4*8

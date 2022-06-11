@@ -142,7 +142,7 @@ static void ssleep(uint32_t t) { usleep(t * CLOCKS_PER_SEC / 1000); }
 
 static void add_mem(int32_t addr) { mem.addr[mem.count++] = addr; }
 
-static int xor128()
+static int xor128()  // random函數，使用xor128
 {
     static uint32_t x = 123456789, y = 362436069, z = 521288629;
     uint32_t t;
@@ -164,6 +164,7 @@ static int execute(char *source)
     init();  // 初始化內存
     lex(source);  // 把rubi文件內容複製到自訂結構tok
     parser();   // 解析語句
+    // 設定funcTable為基底位置，使用對函數的位移來呼叫function
     ((int (*)(int *, void **)) ntvCode)(0, funcTable);
     dispose();  // 執行完畢，釋放內存
     return 0;

@@ -35,8 +35,8 @@ static int execute(char *source)
     init();  // 初始化內存
     lex(source);  // 把rubi文件內容複製到自訂結構tok
     parser();   // 解析語句
-    // 下面這行大概可能我猜是把funtion設在ebp那邊，然後需要呼叫什麼函數，只需要jump到指定位置就OK了
-    (int (*)(int *, void **)) ntvCode;  // 執行機器碼，跑出運行結果
+    // 設定funcTable為基底位置，使用對函數的位移來呼叫function，然後需要呼叫stdlib.c裡面的函數，只需要jump到指定位置就OK了
+    (int (*)(int *, void **)) ntvCode(0, funcTable);  // 執行機器碼，跑出運行結果
     dispose();  // 執行完畢，釋放內存
     return 0;
 }
