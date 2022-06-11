@@ -11,7 +11,7 @@
 教材網址 | [陳鍾誠的系統程式課程](https://kinmen6.com/root/%E9%99%B3%E9%8D%BE%E8%AA%A0/%E8%AA%B2%E7%A8%8B/%E7%B3%BB%E7%B5%B1%E7%A8%8B%E5%BC%8F/README.md)
 [期中作業](https://github.com/stereomp3/sp110b/tree/master/note/midterm) | 研究 [rubi 編譯器](https://github.com/embedded2015/rubi) 後寫成報告 
 [期末作業](#System-Program) | [課堂筆記](#System Program)                                  
-課堂加分題 | [HW1]()、[HW2]()、[HW3]() 
+課堂加分題 | [HW1](work/HW1)、[HW2](work/HW2)、[HW3](work/jit) 
 
 
 
