@@ -1,3 +1,5 @@
+# 習題 2 : 請為 c6 編譯器加上 do ... while 語法的程式碼
+
 ```c
 // 需要在前面enum加上 Do，後面的compiler 的 p加上 do
 else if (tk == Do){  

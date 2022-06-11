@@ -1,3 +1,5 @@
+# 習題 3 : 請用 jit 的方法直接執行一個函數的機器碼
+
 > 執行結果:
 > [![image](https://user-images.githubusercontent.com/79676439/159680798-8bfb7051-e95b-4a13-ac98-c78a58a811b4.png)](https://user-images.githubusercontent.com/79676439/159680798-8bfb7051-e95b-4a13-ac98-c78a58a811b4.png)
 
