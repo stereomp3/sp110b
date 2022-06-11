@@ -2,7 +2,7 @@
 
 ## 語法
 
-```
+```sh
 PROG = STMTS
 BLOCK = { STMTS }
 STMTS = STMT*
@@ -15,7 +15,7 @@ F = (E) | Number | Id
 
 ## 執行結果
 
-```
+```sh
 user@DESKTOP-96FRN6B MINGW64 /d/ccc/book/sp/code/c/02-compiler/03-compiler
 $ make clean
 rm -f *.o *.exe
@@ -66,4 +66,4 @@ t5 = t3 + t4
 i = t5
 goto L0
 (L1)
-``` 
+```
